@@ -26,34 +26,34 @@ header {
 }
 
 .content {
-    padding-top: 200px; /* Die Höhe der Top-Bar anpassen */
-    padding-bottom: 100px; /* Platz für die Social Media Karten und Footer */
+    padding-top: 200px;
+    padding-bottom: 100px;
     padding-left: 2em;
     padding-right: 2em;
     max-width: 1200px;
-    margin: 0 auto; /* Zentriert den Inhalt */
+    margin: 0 auto;
 }
 
 #about {
-    background-color: #393E46; /* Hintergrundfarbe der Box */
+    background-color: #393E46;
     color: white;
-    border-radius: 15px; /* Abgerundete Ecken */
+    border-radius: 15px;
     padding: 2em;
-    position: relative; /* Relative Positionierung für das Profilbild */
-    margin-top: 100px; /* Abstand von der Top-Bar */
-    padding-top: 6em; /* Platz für das Profilbild */
+    position: relative;
+    margin-top: 100px;
+    padding-top: 6em;
 }
 
 .profile-picture {
     position: absolute;
-    top: -100px; /* Positioniert das Profilbild nach oben */
+    top: -100px;
     left: 50%;
-    transform: translateX(-50%); /* Korrigiert die horizontale Positionierung */
+    transform: translateX(-50%);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #393E46; /* Umrandung um das Profilbild */
+    border: 5px solid #393E46;
 }
 
 section {
@@ -61,20 +61,20 @@ section {
 }
 
 footer {
-    background-color: #222831; /* Akzentfarbe */
+    background-color: #222831;
     color: white;
     text-align: center;
     padding: 1em 0;
     position: fixed;
-    width: calc(100% - 1em); /* 1em Abstand links und rechts */
+    width: calc(100% - 1em);
     bottom: 0;
     border-radius: 10px;
-    margin: 0.5em; /* 0.5em Abstand oben, rechts, unten, links */
-    z-index: 5; /* Footer hat einen niedrigeren z-index als die Social Media Karten */
+    margin: 0.5em;
+    z-index: 5;
 }
 
 button.primary {
-    background-color: #00ADB5; /* Primärfarbe */
+    background-color: #00ADB5;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -83,7 +83,7 @@ button.primary {
 }
 
 button.secondary {
-    background-color: #393E46; /* Sekundärfarbe */
+    background-color: #393E46;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -92,14 +92,102 @@ button.secondary {
 }
 
 .alert {
-    background-color: #222831; /* Akzentfarbe */
+    background-color: #222831;
     color: white;
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0;
 }
 
-/* CSS für Social Links */
+.skill-status {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.skill-status li {
+    background-color: #393E46;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Festlegen der Breite */
+}
+
+.skill-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: conic-gradient(
+        #00ADB5 calc(var(--percentage) * 1%),
+        #ddd calc(var(--percentage) * 1%)
+    );
+}
+
+.circle::before {
+    content: '';
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #393E46;
+    position: absolute;
+}
+
+.percentage {
+    position: absolute;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.skill-name {
+    font-size: 1.5em;
+}
+[data-percentage="10"] { --percentage: 10; }
+[data-percentage="20"] { --percentage: 20; }
+[data-percentage="30"] { --percentage: 30; }
+[data-percentage="40"] { --percentage: 40; }
+[data-percentage="50"] { --percentage: 50; }
+[data-percentage="60"] { --percentage: 60; }
+[data-percentage="70"] { --percentage: 70; }
+[data-percentage="80"] { --percentage: 80; }
+[data-percentage="90"] { --percentage: 90; }
+[data-percentage="100"] { --percentage: 100; }
+
+.projekt {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.projekt li {
+    background-color: #393E46;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
 .social-links {
     list-style: none;
     padding: 0;
@@ -107,16 +195,16 @@ button.secondary {
     justify-content: center;
     flex-wrap: wrap;
     position: fixed;
-    width: calc(100% - 1em); /* 1em Abstand links und rechts */
-    bottom: 60px; /* Platz über dem Footer */
+    width: calc(100% - 1em);
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    z-index: 10; /* Höherer z-index, um über dem Footer zu sein */
+    z-index: 10;
 }
 
 .social-links li {
-    background-color: #00ADB5; /* Primärfarbe */
+    background-color: #00ADB5;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -128,15 +216,15 @@ button.secondary {
 
 .social-links a {
     text-decoration: none;
-    color: white; /* Weiße Farbe für Links in den Karten */
+    color: white;
     font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
 social-links a:hover {
-    color: #222831; /* Akzentfarbe beim Hover */
+    color: #222831;
 }
 
 a {
-    text-decoration: none; /* Entfernt die Unterstreichung bei allen Links */
+    text-decoration: none;
 }
