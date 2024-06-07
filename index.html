@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Meine Persönliche Webseite</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="" href="js/index.js">
     </head>
     <body>
         <header>
@@ -22,7 +23,7 @@
 
             <section>
 
-                <h2>Meine Skills</h2>
+                <h2 style="color:white;">Meine Skills</h2>
                 <div>
                     <ul class="skill-status">
                         <li class="skill-status"><div class="skill-container">
@@ -69,24 +70,31 @@
                 </div>
             </section>
             <section>
-                <h2>Meine Projekte</h2>
+                <h2 style="color:white;">Meine Projekte</h2>
                 <div>
                     <ul class="projekt">
-                        <li>Projekt 1</li>
-                        <li>Projekt 2</li>
-                        <li>Projekt 3</li>
+                        <li><h3>Projekt 1</h3></li>
+                        <li><h3>Projekt 2</h3> </li>
+                        <li><h3>Projekt 3</h3> </li>
                     </ul>
                 </div>
             </section>
 
             <section id="contact">
-                <h2>Kontakt</h2>
+                <h2 style="color:white;">Kontakt</h2>
                 <p>Du kannst mich über folgende Kanäle erreichen:</p>
-                <ul>
-                    <li>E-Mail: julius.krams@example.com</li>
-                    <li>Telefon: +49 123 456789</li>
-                </ul>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="img/email-icon.png" alt="E-Mail Icon" class="contact-icon">
+                        <a href="mailto:julius.krams@gmail.com" class="contact-text">julius.krams@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="img/phone-icon.png" alt="Telefon Icon" class="contact-icon">
+                        <a href="tel:+4915162701249" class="contact-text">+49 151 62701249</a>
+                    </div>
+                </div>
             </section>
+
         </main>
 
         <ul class="social-links">
@@ -98,5 +106,6 @@
         <footer>
             <p>&copy; 2024 Meine Persönliche Webseite</p>
         </footer>
+        <script src="./js/index.js"></script>
     </body>
 </html>
